@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cristiano Ronaldo Career Analytics Dashboard</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- PapaParse -->
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <header class="header">
+
+    <div class="header-left">
+
+        <h1>Cristiano Ronaldo Career Analytics Dashboard</h1>
+
+        <p>
+            Football Player Analytics Dashboard
+        </p>
+
+    </div>
+
+    <div class="header-right">
+
+        <img src="assets/ronaldo.jpeg" alt="Cristiano Ronaldo">
+</div>
+
+</header>
+    <!-- KPI -->
+    <section class="kpi-container">
+
+        <div class="card">
+            <i class="fa-solid fa-futbol"></i>
+            <h2 id="totalGoals">0</h2>
+            <span>Total Goals</span>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-trophy"></i>
+            <h2 id="competition">0</h2>
+            <span>Competitions</span>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-building-columns"></i>
+            <h2 id="clubs">0</h2>
+            <span>Clubs</span>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-calendar"></i>
+            <h2 id="season">0</h2>
+            <span>Seasons</span>
+        </div>
+
+    </section>
+
+    <!-- CHART -->
+    <section class="chart-grid">
+
+        <div class="chart-card">
+
+            <h3>Goals Per Season</h3>
+
+            <canvas id="seasonChart"></canvas>
+
+        </div>
+
+        <div class="chart-card">
+
+            <h3>Goals by Competition</h3>
+
+            <canvas id="competitionChart"></canvas>
+
+        </div>
+
+        <div class="chart-card">
+
+            <h3>Goals by Club</h3>
+
+            <canvas id="clubChart"></canvas>
+
+        </div>
+
+        <div class="chart-card">
+
+            <h3>Goal Minute Distribution</h3>
+
+            <canvas id="minuteChart"></canvas>
+
+        </div>
+
+    </section>
+
+    <!-- TABLE -->
+    <section class="table-section">
+
+        <h3>Career Statistics</h3>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Date</th>
+
+                    <th>Club</th>
+
+                    <th>Competition</th>
+
+                    <th>Opponent</th>
+
+                    <th>Goal Minute</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="tableBody">
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+</div>
+
+<footer class="footer">
+
+    <p>
+        Cristiano Ronaldo Career Analytics Dashboard
+    </p>
+
+    <p>
+        Data Source: Kaggle Dataset
+    </p>
+
+    <p>
+        Created by <strong>Rafi</strong> © 2026
+    </p>
+
+</footer>
+<script src="script.js"></script>
+
+</body>
+</html>
